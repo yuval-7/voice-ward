@@ -34,3 +34,7 @@ Browser speech recognition and the no-key audio fallback depend on browser capab
 ## Test
 
 `npm test` verifies the fencing invariant. For the full acceptance test, send a request and hit **Interrupt** during speech; then submit a revision. The prior audio must stop and no late reply must be spoken.
+
+## Deploy to Vercel
+
+Import this GitHub repository in Vercel. Add `RIME_API_KEY` as an environment variable for Production, Preview, and Development. Do not use or upload `.env`. Vercel serves the browser app from `public/` and runs the secure Rime proxy in `api/`.
