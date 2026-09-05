@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Voice Ward</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+  <main>
+    <p class="eyebrow">VOICE-NATIVE INCIDENT DESK</p>
+    <h1>Voice Ward</h1>
+    <p class="lede">A hands-busy incident assistant that listens while it speaks. Interrupt any response; late audio is never allowed back into the conversation.</p>
+    <section class="console" aria-label="Voice Ward console">
+      <div class="topline"><span id="status" role="status">Checking voice provider...</span><span id="provider" class="pill">Loading...</span></div>
+      <div id="transcript" class="transcript" aria-live="polite"><div class="message system">System: Voice Ward is ready. Describe the incident or use the microphone.</div></div>
+      <form id="composer">
+        <label for="prompt">What needs attention?</label>
+        <textarea id="prompt" maxlength="500" placeholder="Example: The west pump is overheating. Check the shutdown procedure."></textarea>
+        <div class="controls"><button type="button" id="mic">Start listening</button><button type="submit" class="primary">Send</button><button type="button" id="interrupt" class="danger" disabled>Interrupt</button></div>
+      </form>
+    </section>
+    <section class="proof"><h2>Acceptance test</h2><ol><li>Send a request.</li><li>Press <em>Interrupt</em> while it is thinking or speaking.</li><li>Send a revised request.</li></ol><p>The original audio stops, its request is aborted, and its late result cannot be played.</p></section>
+  </main>
+  <script src="/app.js"></script>
+</body></html>
